@@ -1,5 +1,5 @@
 # User name
-username = "YOUR USER NAME HERE!"
+username = "postgres"
 
 # Password
-password = "YOUR PASSWORD HERE!"
+password = "postgres"
