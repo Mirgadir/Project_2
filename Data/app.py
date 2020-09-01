@@ -48,17 +48,22 @@ def interactive_pie(fire_cause,st,year):
 def welcome():
     return("Available Routes:<br/> /api/v1.0/interactive_pie/<fire_cause>/<st>/<year>")
 
-@app.route("/api/v1.0/interactive_pie/<fire_cause>/<st>/<year>")
-def interactive_pie(fire_cause, st, year):
+@app.route("/api/v1.0/interactive_pie/<st>/<year>")
+def interactive_pie(st, year):
     session = Session(engine)  
-    pie_results = session.query(fire_table.fire_cause, fire_table.st, fire_table.year)    .filter(fire_table.fire_cause == fire_cause)    .filter(fire_table.st == st)    .filter(fire_table.year == year).all()
+    pie_results = session.query(fire_table.cause1, fire_table.cause2, fire_table.st, fire_table.year)\
+    .filter(fire_table.st == st)\
+    .filter(fire_table.year == year).all()
+        #.filter(fire_table.cause1 == cause1)\
+    #.filter(fire_table.cause2 == cause2)\
     
     session.close()
     
     pie_string = []
-    for fire_cause, st, year in pie_results:
+    for cause1, cause2, st, year in pie_results:
         pie_data_dict = {}
-        pie_data_dict["fire_cause"] = fire_cause
+        pie_data_dict["cause1"] = cause1
+        pie_data_dict["cause2"] = cause2
         pie_data_dict["st"] = st
         pie_data_dict["year"] = year
         pie_string.append(pie_data_dict)
