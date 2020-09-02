@@ -39,9 +39,27 @@ from fires_2013_2017
 group by fire_cause
 order by fire_cause
 
+--
+-- Remove Spaces in Causes
+--
 Update fires_2013_2017
-set fire_cause = 'Undetermined'
-where fire_cause IS NULL
+ set cause1 = ltrim(rtrim(cause1))
+ 	,cause2 = ltrim(rtrim(cause2))
+	,cause3 = ltrim(rtrim(cause3))
+	,cause4 = ltrim(rtrim(cause4));
+
+--
+-- Remove Spaces in Causes
+--
+Update fires_2013_2017
+ set cause1 = replace(cause1, '/', '_') 
+ 	,cause2 = replace(cause2, '/', '_')
+	,cause3 = replace(cause3, '/', '_')
+	,cause4 = replace(cause4, '/', '_');
+
+Update fires_2013_2017
+set fire_cause = 'Other_Undetermined'
+where fire_cause IS NULL;
 
 --
 --	Group undetermined/Null values for cause1
@@ -49,11 +67,12 @@ where fire_cause IS NULL
 select cause1, count(*)
 from fires_2013_2017
 group by cause1
-order by cause1
+order by cause1;
 
 Update fires_2013_2017
-set cause1 = 'Undetermined'
+set cause1 = 'Other_Undetermined'
 where cause1 IS NULL
+
 
 --
 --	Group undetermined/Null values for cause2
@@ -64,7 +83,7 @@ group by cause2
 order by cause2
 
 Update fires_2013_2017
-set cause2 = 'Other/Undetermined'
+set cause2 = 'Other_Undetermined'
 where cause2 IS NULL
 or cause2 = 'Other'
 
@@ -77,7 +96,7 @@ group by cause3
 order by cause3
 
 Update fires_2013_2017
-set cause3 = 'Other/Undetermined'
+set cause3 = 'Other_Undetermined'
 where cause3 IS NULL
 or cause3 like '%unknown%'
 or cause3 = 'Unknown'
@@ -92,7 +111,7 @@ group by cause4
 order by cause4
 
 Update fires_2013_2017
-set cause4 = 'Other/Undetermined'
+set cause4 = 'Other_Undetermined'
 where cause4 IS NULL
 or cause4 like '%unknown%'
 
@@ -103,23 +122,6 @@ FROM fires_2013_2017
 group by cause1
 order by cause1
 
---
--- Remove Spaces in Causes
---
-Update fires_2013_2017
- set cause1 = ltrim(rtrim(cause1))
- 	,cause2 = ltrim(rtrim(cause2))
-	,cause3 = ltrim(rtrim(cause3))
-	,cause4 = ltrim(rtrim(cause4))
-
---
--- Remove Spaces in Causes
---
-Update fires_2013_2017
- set cause1 = replace(cause1, '/', '_') 
- 	,cause2 = replace(cause2, '/', '_')
-	,cause3 = replace(cause3, '/', '_')
-	,cause4 = replace(cause4, '/', '_')
 
 --
 --	Get distinct values for API Data Dictionary
