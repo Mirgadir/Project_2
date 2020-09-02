@@ -158,3 +158,7 @@ order by st
 Select Max(cast(date as date))
 	,MIN(cast(date as date))
 FROM fires_2013_2017
+
+
+Select * FROm fires_2013_2017
+

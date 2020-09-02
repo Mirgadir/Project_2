@@ -18,7 +18,7 @@ from flask import Flask, jsonify
 
 # !pip install psycopg2
 # db Setup
-engine = create_engine("")
+engine = create_engine("postgres://nczozxhlrcyoqp:e50ab3fc6da28bf87e8e09a08841defd50a1ed73eb74febe6fcf02a24c9688e0@ec2-50-17-178-87.compute-1.amazonaws.com:5432/daq2j0ovj687mc")
 base = automap_base()
 base.prepare(engine, reflect=True)
 session = Session(engine)
