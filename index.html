@@ -9,7 +9,8 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-
+    <!-- define Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
     <!-- Bootstrap core CSS     -->
     <link href="Dashboard/assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -150,11 +151,7 @@
                                 <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
 
                                 <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Bounce
-                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
-                                    </div>
+
                                     <hr>
                                     <div class="stats">
                                         <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
@@ -173,11 +170,6 @@
                             <div class="content">
                                 <div id="chartHours" class="ct-chart"></div>
                                 <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Click
-                                        <i class="fa fa-circle text-warning"></i> Click Second Time
-                                    </div>
                                     <hr>
                                     <div class="stats">
                                         <i class="fa fa-history"></i> Updated 3 minutes ago
@@ -194,20 +186,17 @@
                     <div class="col-md-6">
                         <div class="card ">
                             <div class="header">
-                                <h4 class="title">2014 Sales</h4>
-                                <p class="category">All products including Taxes</p>
+                                <h4 class="title">US Landfires between 2013 and 2017</h4>
                             </div>
-                            <div class="content">
-                                <div id="chartActivity" class="ct-chart"></div>
+                            <div class="content" >
+                                <div id="myTable">
+
+                                </div>
 
                                 <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-danger"></i> BMW 5 Series
-                                    </div>
                                     <hr>
                                     <div class="stats">
-                                        <i class="fa fa-check"></i> Data information certified
+                                        <i class="fa fa-check"></i> Cleansed Data Table
                                     </div>
                                 </div>
                             </div>
@@ -389,7 +378,9 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="Dashboard/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+    <script src="Dashboard/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+    <!-- create data table from by using cleansed data csv -->
+    <script src="Dashboard/assets/js/dashboard.js"></script>
 
 
 </html>
