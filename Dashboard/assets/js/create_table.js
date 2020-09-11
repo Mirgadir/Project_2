@@ -47,7 +47,7 @@ var data = [{
 var layout = {
   hoverlabel: { bgcolor: "salmon" },
   width: document.documentElement.clientWidth * 0.8,
-  height: document.documentElement.clientHeight * 0.9,
+  height: document.documentElement.clientHeight * 0.9
 }
 
 Plotly.newPlot('myTable', data, layout);
