@@ -8,11 +8,12 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, MetaData, Table, Column
 from flask import Flask, jsonify
-import config
+# import config
 
 # Create engine, automap and session
 # db Setup
-engine = create_engine(f'postgres://{config.user}:{config.password}@ec2-52-22-216-69.compute-1.amazonaws.com:5432/d5qr295as59lsj')
+# engine = create_engine(f'postgres://{config.user}:{config.password}@ec2-52-22-216-69.compute-1.amazonaws.com:5432/d5qr295as59lsj')
+engine = create_engine(DATABASE_URL)
 base = automap_base()
 base.prepare(engine, reflect=True)
 session = Session(engine)
