@@ -8,6 +8,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, MetaData, Table, Column
 from flask import Flask, jsonify, render_template
+from flask_cors import CORS
 import os
 import config
 
@@ -63,7 +64,10 @@ def interactive_pie(st, year):
         pie_data_dict["cause4"] = cause4
 
         pie_string.append(pie_data_dict)
-    return jsonify(pie_string)
+
+    response = jsonify(pie_string)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return (response)
 
 
 # @app.route("/api/v1.0/everything/")
