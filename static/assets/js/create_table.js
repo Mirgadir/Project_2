@@ -38,7 +38,7 @@ Plotly.d3.csv("https://raw.githubusercontent.com/TheGreekGoddess/Project_2/maste
       height: 30,
       align: ["center", "center"],
       line: {color: "black", width: 1},
-      fill: {color: ['rgba(228, 222, 249, 0.65)','#ffa534d6', 'rgba(228, 222, 249, 0.65)']},
+      fill: {color: ['rgba(228, 222, 249, 0.65)','#ffa534', 'rgba(228, 222, 249, 0.65)']},
       font: {family: "Arial", size: 11, color: ["black"]}
     }
   }]
