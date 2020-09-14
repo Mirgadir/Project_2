@@ -144,7 +144,7 @@ h1 .subtitle {
 }
 
 .text-warning, .text-warning:hover {
-    color: #FF9500 !important;
+    color: #ffe571 !important;
 }
 
 .text-danger, .text-danger:hover {
@@ -2351,8 +2351,8 @@ fieldset[disabled] .btn-neutral.active {
 }
 
 .card .ct-chart {
-    margin: 30px 0 30px;
-    height: 245px;
+    height: 600px;
+    margin-bottom: -50px;
 }
 
 .card .table tbody td:first-child,
@@ -2725,6 +2725,9 @@ fieldset[disabled] .btn-neutral.active {
 
 .ct-series-o .ct-slice-pie, .ct-series-o .ct-area {
     fill: #a748ca;
+}
+.ct-slice-pie{
+    margin-bottom: 12px;
 }
 
 .ct-square {
