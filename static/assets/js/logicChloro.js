@@ -52,7 +52,7 @@ var fire_count =
  {'Oklahoma': 1407},
  {'Oregon': 2231},
  {'Pennsylvania': 17},
- {'Puerto Rico': 147},
+//  {'Puerto Rico': 147}, Choropleth does not have Puerto Rico as a GeoJSON
  {'Rhode Island': 1},
  {'South Carolina': 28},
  {'South Dakota': 2101},
