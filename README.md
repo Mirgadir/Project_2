@@ -1,4 +1,4 @@
-##Project 2 - Analysing US Land fires between 2013 - 2017
+<h1>Project 2 - Analysing US Land fires between 2013 - 2017</h1>
 
 https://datavisproject2.herokuapp.com/
 
