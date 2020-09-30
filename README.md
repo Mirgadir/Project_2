@@ -1,4 +1,5 @@
-Project 2 - Analysing US Land fires between 2013 - 2017
+##Project 2 - Analysing US Land fires between 2013 - 2017
+
 https://datavisproject2.herokuapp.com/
 
 For Project 2, our group decided to analyze wildfires in the US given the current situation on the West coast. As we started researching for data sets and potential visualization, we came across some incredible projects hosted on Kaggle, and soon we found ourselves swooning over Purple Air! By the end of the first working session, we had decided to analyze the land fires in the US for a period of 5 years spanning from 2013 to 2017.
